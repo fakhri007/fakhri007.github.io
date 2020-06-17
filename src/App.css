@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+.navbar-dark .navbar-nav .nav-link {
+    color: #222222;
+}
+.nav-bg-bwh{
+  background-color: #8997f5;
+  box-shadow: 2px 2px 4px #000000;
+}
+.nav-bg-atas{
+  background-color: #7a8cff;
+  height: 200%
+
+
+}
+.semi-light-color{
+  color:  white;
+  font-weight: bolder;
+  font-size: 150%
+  /* height: 200 */
+}
+/* .nav-point{
+  border-left: solid 1px;
+  align-items: center;
+} */

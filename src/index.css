@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.carousel .slide img {
+    max-height: 50%;  /* change this to whatever you want */
+    width: auto;
+}
+.navbar-a{
+	background-color: red;
+}

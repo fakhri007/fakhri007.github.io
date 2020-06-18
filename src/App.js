@@ -1,14 +1,22 @@
 import React,{Component} from 'react';
 import logo from './logo.svg';
-import {BrowserRouter, Link, Route,Switch} from 'react-router-dom'
+import {BrowserRouter, Route,Switch} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 import 'bootstrap/dist/js/bootstrap.min.js'
 import 'jquery/dist/jquery.min.js'
 import './App.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import { Navbar,Nav,NavDropdown,Form,FormControl,Button } from 'react-bootstrap';
+import { Navbar,Nav,NavDropdown,Form,FormControl,Button,Row,Col,Container,Image } from 'react-bootstrap';
 import { SocialIcon } from 'react-social-icons';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
+
+
+
 
 class App extends Component {
 state = {
@@ -46,21 +54,13 @@ return(
   <Navbar  className="nav-bg-bwh" expand="lg" fixed="top" bg="light" style={{position:'sticky',top:0}}>
 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end" >
-  <Nav className="mr-sm-2" >
-    <Nav.Link href="#home" className="nav-point">Home</Nav.Link>
-    <Nav.Link></Nav.Link>
-    <Nav.Link href="#product" className="nav-point">Product</Nav.Link>
-    <Nav.Link></Nav.Link>
-    <Nav.Link href="#link" className="nav-point">Profile</Nav.Link>
-    <Nav.Link></Nav.Link>
-    <NavDropdown title="Branch" id="basic-nav-dropdown" className="nav-point">
-      <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-      <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-      <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-      <NavDropdown.Divider />
-      <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-    </NavDropdown>
-    <Nav.Link></Nav.Link>
+  <Nav className="mr-sm-4" >
+
+    <Link  activeClass="active" className="home nav-link nav-point" to="home" spy={true} smooth={true} offset={-140} duration={500} >Home</Link>
+
+      <Link activeClass="active" className="product nav-link nav-point " to="product" spy={true} smooth={true} offset={-60} duration={500} >
+    About Us</Link>
+
   </Nav>
   <Form inline>
     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -68,6 +68,8 @@ return(
   </Form>
 </Navbar.Collapse>
 </Navbar>
+
+<Element name="home" className="element" >
 
 
   <div style= {{position :'stycky' , top:0}} >
@@ -86,10 +88,77 @@ return(
       </div>
     </Carousel>
   </div>
+  </Element>
+  <Element name="product" className="element" offset={-90} >
+  <div className="container-fluid" style={{height:'30em', backgroundColor:'#7a8cff'}}>
+  <div className="container about-us">
+  <Container>
+  <Row>
+  <Col sm>
+  <ScrollAnimation animateIn='bounceInLeft' anomateOut='bounceInLeft' animatePreScroll={true}>
 
-  <div style={{position:'sticky', display:'block',width:'100%',height:'40em', backgroundColor:'#3399ff'}}>
+  <h4>
+    Story About Us
+  </h4>
+  <h1>
+    Who We Are
+  </h1>
+  <br/>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim. </p>
+  <ul>
+  <li>lorem ipsum dolor amet</li>
+  <li>ipsum dolor amet sensah</li>
+  <li>lorem ipsum dolor amet</li>
+  <li>ipsum dolor amet sensah</li>
+  </ul>
+
+
+
+
+
+</ScrollAnimation>
+</Col>
+<Col sm>
+  <ScrollAnimation animateIn='bounceInRight' anomateOut='bounceInRight' animatePreScroll={true}>
+  <Image className="image" src={require('./4.jpg')}  />
+  </ScrollAnimation>
+  </Col>
+</Row>
+</Container>
+  </div>
 
   </div>
+</Element>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
+<p>a</p>
 </div>
 </BrowserRouter>
 )

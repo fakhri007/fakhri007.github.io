@@ -13,6 +13,7 @@
   }
 }
 
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -43,6 +44,12 @@
   background-color: #8997f5;
   box-shadow: 2px 2px 4px #000000;
 }
+@media (max-width: 767px) {
+  .nav-bg-bwh{
+    background-color: #8997f5;
+    box-shadow: none;
+  }
+}
 .nav-bg-atas{
   background-color: #7a8cff;
   height: 200%
@@ -59,3 +66,59 @@
   border-left: solid 1px;
   align-items: center;
 } */
+.nav-point{
+  width:6em;
+  text-align:center;
+  /* border-spacing: 5em; */
+
+}
+.active{
+  border-bottom: solid;
+  border-color: #7a8cff
+  /* font-weight: bold; */
+  /* border-width: thin; */
+  /* border-spacing: 5em; */
+}
+
+.about-us{
+  position: absolute;
+  margin-top: 3em;
+  margin-left: 6em;
+  margin-right: 6em
+}
+.image{
+  max-width: 35em;
+  margin-top: 2em;
+  margin-left:0em;
+  margin-right: 3em;
+}
+@media (max-width: 767px) {
+  .active{
+    border-bottom: none;
+    border-color: #7a8cff
+
+  }
+  .about-us{
+    position: absolute;
+    margin-top: 3em;
+    margin-left: 0em;
+    margin-right: 0em;
+  }
+  .image{
+    display: none
+  }
+
+}
+h1{
+  color:#d2d2d4;
+  font-weight: normal;
+
+  /* font-size: 3em */
+}
+h4{
+  font-weight: lighter;
+  color: #d2d2d4;
+}
+p,li{
+  color:#d2d2d4
+}
